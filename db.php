@@ -4,7 +4,7 @@ class Db {
     public $mysql;
 
     function __construct() {
-        $this->mysql = new mysqli('localhost', 'root', 'zQ?K2bZG', 'toDoListDatabase') or die('problem');
+        $this->mysql = new mysqli('localhost', 'root', 'pass', 'toDoListDatabase') or die('problem');
     }
 
 		function update_by_id($id, $description) {
@@ -13,11 +13,11 @@ class Db {
           WHERE id = ?
               LIMIT 1";
 
-    if($stmt = $this->mysql->prepare($query)) {
-        $stmt->bind_param('si', $description, $id);
-        $stmt->execute();
-        return 'good job! Updated';
-    }
+	    if($stmt = $this->mysql->prepare($query)) {
+	        $stmt->bind_param('si', $description, $id);
+	        $stmt->execute();
+	        return 'good job! Updated';
+	    }
 		}
 
 		function delete_by_id($id) {
