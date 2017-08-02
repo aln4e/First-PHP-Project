@@ -15,7 +15,7 @@ $items = $itemsQuery->rowCount() ? $itemsQuery : [];
 		<title>To do</title>
 		<link rel="stylesheet" href="styles.css">
 	</head>
-	<body>
+	<body class="indexBackgroundImage">
 		<div class="list">
 			<h1 class="header">To Do</h1>
 			<?php if(!empty($items)): ?>
@@ -24,7 +24,7 @@ $items = $itemsQuery->rowCount() ? $itemsQuery : [];
 					<li>
 						<span class="item<?php echo $item['done'] ? ' done' : '' ?>"><?php echo $item['name']; ?></span>
 						<?php if(!$item['done']): ?>
-							<a href="mark.php?as=done&item=<?php echo $item['id']; ?>" class="done-button">Mark as done</a>
+							<a href="mark.php?as=done&item=<?php echo $item['id']; ?>" class="done-button">Done</a>
 						<?php else: ?>
 							<a href="mark.php?as=notdone&item=<?php echo $item['id']; ?>" class="done-button">Undo</a>
 						<?php endif; ?>
@@ -36,6 +36,7 @@ $items = $itemsQuery->rowCount() ? $itemsQuery : [];
 			<?php endif; ?>
 			<form class="item-add" action="add.php" method="post">
 				<input type="text" name="name" placeholder="Add a new To Do" class="input" autocomplete="off" required />
+				<br />
 				<input type="submit" value="Add" class="submit" />
 			</form>
 		</div>

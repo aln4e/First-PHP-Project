@@ -1,7 +1,38 @@
+.list {
+	display: flex;
+	align-items: center;
+	padding: 25px 100px 50px 100px;
+	background-color: white;
+	opacity: .5;
+}
+
+ul {
+	list-style-type: none;
+	display:flex;
+	flex-direction: column;
+	margin-left: 10px
+}
+
+ul li {
+	margin: 5px;
+}
+
+span {
+	margin-right: 20px;
+}
+
+form {
+	margin-left: 40px;
+}
+
+input {
+	width:100px;
+}
+
 .done {
 	text-decoration: line-through;
 }
-/*
+
 .indexBackgroundImage {
 	background-image: url("https://c1.staticflickr.com/9/8111/8608094661_f6fdcc0c83_b.jpg");
 	background-size: cover;
@@ -10,25 +41,6 @@
 	flex-wrap: wrap;
 }
 
-.panel {
-	background-color: white;
-	width: 500px;
-	opacity: .75;
-	margin-top: 20px;
-	align-self: center
+.done-button {
+	float: right;
 }
-
-h1, .inputFields {
-	font-weight: bold;
-	font-family:fantasy;
-	margin: 10px;
-}
-
-.actionImage {
-	background-image: url("http://www.publicdomainpictures.net/pictures/150000/velka/tropical-beach-1454007190ZAK.jpg");
-	background-size: cover;
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	flex-direction: column;
-}*/
