@@ -5,21 +5,9 @@ if(isset($_GET['as'], $_GET['item'])) {
 	$item = $_GET['item'];
 
 	switch($as) {
-		case 'done':
+		case 'delete':
 			$doneQuery = $db->prepare("
-				UPDATE items
-				SET done = 1
-				WHERE id = :item
-			");
-			$doneQuery->execute([
-				'item' => $item
-			]);
-		break;
-
-		case 'notdone':
-			$doneQuery = $db->prepare("
-				UPDATE items
-				SET done = 0
+				DELETE FROM items
 				WHERE id = :item
 			");
 			$doneQuery->execute([
