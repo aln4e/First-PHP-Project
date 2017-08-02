@@ -1,3 +1,7 @@
+.done {
+	text-decoration: line-through;
+}
+/*
 .indexBackgroundImage {
 	background-image: url("https://c1.staticflickr.com/9/8111/8608094661_f6fdcc0c83_b.jpg");
 	background-size: cover;
@@ -27,4 +31,4 @@ h1, .inputFields {
 	justify-content: center;
 	flex-wrap: wrap;
 	flex-direction: column;
-}
+}*/
